@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/main-css.css">
+    <link rel="stylesheet" href="assets/app.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header_home">
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid">
+                <a class="navbar-brand" href=""><img src="img/main-logo.png" alt="" title="" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.php"><span>HOME</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="line-up.php"><span>LINE UP</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><span>REGISTER</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="flashback.php"><span>FLASHBACK</span></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link " href="faq.php"><span>FAQS</span></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link " href="hit-up-us.php"><span>HIT US
+                                    UP</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+    <!-- Modal -->
+    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">REGISTER NOW</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="insider-embed"></div>
+                    <!-- Include this following script in your HTML. This does heavy-lifting of loading
+    stuff inside the above specified div. Note that the script will set css position
+    attribute to absolute.-->
+                    <script src="https://insider.in/scripts/insider-embed/dist/scripts/insider_embed.min.js"></script>
+                    <!-- This where the plugin is initialised. The above script add an object - insiderEmbed - to
+    to the window scope of the current document. insiderEmbed exposes only one function - init.
+    init accepts one argument which is an object which define the behaviour of the plugin.
+    The object supports the following properties:
+    * mountId : The id of the div element in which the buy-flow shall be displayed.
+    * eventSlug: The slug of the event for which the buy needs to be initialised.
+    * redirectURL: The url to which the user will be directed after payments, if no url is
+                    specified the user will be redirect to the post-payment page at insider.
+    * frameWidth: (Optional) The desired width of the iframe in px. (Provide only integer values,
+                    do not use postfix like ‘px’ or ‘%’.) Defaults to 100%.
+    * frameHeight: (Optional) The desired height of the iframe in px. (Provide only integer values,
+                    do not use postfix like ‘px’ or ‘%’.) Defaults to auto. -->
+                    <script>
+                        insiderEmbed.init({
+                            "mountId": "insider-embed",
+                            "eventSlug": "south-side-story-aug21-2021",
+                            "frameHeight": 450,
+                            "merchantId": "6103b93de4ac0c00093462a4"
+                        });
+                    </script>
+
+                    <style>
+                        .content-html {
+                            display: block !important;
+                        }
+                    </style>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Wheels -->
+    <div class="wheels">
+        <div class="wheel-bg"></div>
+        <div class="pyramids"></div>
+        <div class="wheel-1"></div>
+        <div class="wheel-2"></div>
+        <div class="wheel-btns">
+            <a class="btnlink" href="javascript:void(0);" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">REGISTER</a>
+            <a class="btnlink" href="#">PHOTOBOOTH</a>
+            <a class="btnlink" href="#">KATTAN KART</a>
+            <a class="btnlink">STAGES</a>
+            <a class="btnlink">MIND EAT, MURUGAN!</a>
+        </div>
+        <div class="scroll_to_explore">SCROLL TO<br>EXPLORE</div>
+        <div id="swiped" class="swiped"></div>
+    </div>
+
+    <!-- javascript -->
+    <script src="assets/jquery-3.4.1.min.js"></script>
+    <script src="assets/bootstrap.bundle.min.js"></script>
+    <script src="assets/app.js"></script>
+</body>
+
+</html>
